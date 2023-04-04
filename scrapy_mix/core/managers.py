@@ -6,22 +6,25 @@ PipeManager 管理处理管道，MidWareManager 管理中间件，EngineManager 
 整个爬虫框架的实现是基于这些管理器类的相互协作和调用。
 """
 
-from importlib import import_module
-from scrapy_mix.core.parts.engine import Engine
-from scrapy_mix.core.parts.nodes import Item, AioHttpRequest, SeleniumRequest
-from scrapy_mix.core.parts.downloaders import AioHttpDownLoader, SeleniumDownloader
-from scrapy_mix.core.parts.stackers import *
 
-from queue import Queue, LifoQueue
-import asyncio
-import json
-import random
-import time
-import os
-from selenium import webdriver
+from scrapy_mix.parts.engine import Engine
+from scrapy_mix.parts.nodes import Item, AioHttpRequest, SeleniumRequest
+from scrapy_mix.parts.downloaders import AioHttpDownLoader, SeleniumDownloader
+from scrapy_mix.parts.stackers import *
+
 from settings.aiohttp_settings import create_session
 from settings.selenium_seletings import options, desired_capabilities
 from settings import clawer_settings
+
+from importlib import import_module
+from queue import Queue, LifoQueue
+from selenium import webdriver
+
+import asyncio
+import json
+import time
+import os
+
 
 def create_obj_from_path_dt_2lt(paths_dt):
     obj_lt = []

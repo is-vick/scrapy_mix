@@ -1,4 +1,4 @@
-from scrapy_mix.core.parts.nodes import Response
+from scrapy_mix.parts.nodes import Response
 import time
 import asyncio
 

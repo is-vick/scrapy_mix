@@ -46,26 +46,25 @@ class Clawer:
         self.pipe_manager.close_spider()
         await self.downloader_manager.close_spider()
 
-    # 
-    def core(self):
+    # the core of the frame, run this method to start the crawl
+    def main(self):
         """
         application interface for the program to run
         """
         try:
-            asyncio.run(self.go())
+            asyncio.run(self.core())
             self.interrupt_manager.non_interrupt_do()
         except BaseException as e:
             asyncio.run(self.interrupt_manager.interrupt_record())
             raise e
 
 
-    async def go(self):
+    async def core(self):
         """
         call engine_manager to start engines
         """
         await self.open_spider()
         cache = self.interrupt_manager.cache()
-
         if cache:
             await self.interrupt_manager.interrupt_recovery(cache=cache)
         else:
