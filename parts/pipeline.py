@@ -1,4 +1,4 @@
-from scrapy_mix.core.parts.pipe import Pipe
+from scrapy_mix.parts.pipe import Pipe
 import asyncio
 import random
 import time

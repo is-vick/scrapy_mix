@@ -1,5 +1,5 @@
-from scrapy_mix.core.parts.tree import Tree
-from scrapy_mix.core.parts.nodes import AioHttpRequest, SeleniumRequest
+from scrapy_mix.parts.tree import Tree
+from scrapy_mix.parts.nodes import AioHttpRequest, SeleniumRequest
 from parts.items import SpiderItem
 
 # class SpiderTree(Tree):

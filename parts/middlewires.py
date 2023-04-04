@@ -1,4 +1,4 @@
-from scrapy_mix.core.parts.midware import Midware
+from scrapy_mix.parts.midware import Midware
 from fake_useragent import UserAgent
 headers = {
 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',

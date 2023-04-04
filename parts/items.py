@@ -1,4 +1,4 @@
-from scrapy_mix.core.parts.nodes import Item
+from scrapy_mix.parts.nodes import Item
 
 
 class SpiderItem(Item):
