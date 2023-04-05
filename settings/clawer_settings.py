@@ -9,19 +9,18 @@ DELAY = 1
 
 # pipelines
 PIPES = {
-    'parts.pipeline.Pipeline': 200
+    'wparts.pipeline.Pipeline': 200
 }
 
 # middlewires
 MIDWARES = {
-    'parts.middlewires.Middleware': 200
+    'wparts.middlewires.Middleware': 200
 }
 
-# tree
+# trees
 TREES = {
-    # 'maoyan_tree.MaoYanTree': 200
-    'parts.trees.SpiderTree': 200
+    'wparts.trees.SpiderTree': 200
          }
-
+# start downloader or not
 AIOHTTPDOWNLOADER = True
 SELENIUMDOWNLOADER = True

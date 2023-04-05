@@ -45,6 +45,7 @@ class Clawer:
         self.midware_manager.close_spider()
         self.pipe_manager.close_spider()
         await self.downloader_manager.close_spider()
+        await asyncio.sleep(5)
 
     # the core of the frame, run this method to start the crawl
     def main(self):
@@ -73,5 +74,4 @@ class Clawer:
         while not self.async_queue_manager.queue.empty():
             await self.engine_manager.start_engines()
         await self.close_spider()
-        await asyncio.sleep(5)
 

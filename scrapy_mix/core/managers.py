@@ -272,6 +272,7 @@ class InterruptManager:
         cache['records'] = records + num
         with open('cache.json', 'w') as f:
             json.dump(cache, f, ensure_ascii=True)
+            
         await self.clawer.close_spider()
    
 
