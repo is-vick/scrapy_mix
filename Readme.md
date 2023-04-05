@@ -1,4 +1,3 @@
-@import "https://haogeshuohuanihaohaoting.github.io/static/mdCreateMenu.js"
 # Scrapy_mix
 `python 3.10`
 
